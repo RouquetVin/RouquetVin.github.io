@@ -1,0 +1,10 @@
+.container__menu {
+	padding: 0 10px;
+}
+
+@media (min-width: 1024px) {
+	.container__menu {
+		max-width: 1055px;
+		margin: auto;
+	}
+}

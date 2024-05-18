@@ -1,0 +1,35 @@
+.btn {
+	height: 50px;
+	width: 186px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $btn-gradient-bg;
+	box-shadow: 0px 4px 10px 0px #00000040;
+	color: white;
+	text-decoration: none;
+	border-radius: 25px;
+	font-size: 16px;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+	position: relative;
+
+	&:hover {
+		&::after {
+			opacity: 1;
+		}
+	}
+
+	&::after {
+		border-radius: 25px;
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-color: rgba(255, 255, 255, 0.1);
+		box-shadow: 0px 8px 20px 0px #00000040;
+		opacity: 0;
+		transition: opacity 250ms;
+	}
+}

@@ -1,0 +1,165 @@
+.menu {
+	margin-top: -34px;
+	border-radius: 32px 32px 0 0;
+	background: $primary-bg;
+	z-index: 1;
+	position: relative;
+	padding-bottom: 40px;
+
+	.section__title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-right: 20px;
+
+		h2 {
+			font-weight: 400;
+			font-family: 'Shrikhand', 'cursive';
+			font-size: 28px;
+		}
+	}
+
+	.starters__section,
+	.dishes__section,
+	.desserts__section {
+		margin-bottom: 40px;
+
+		h3 {
+			font-weight: 300;
+			font-size: 16px;
+			margin-bottom: 0;
+		}
+
+		hr {
+			width: 40px;
+			height: 3px;
+			background: $tertiary-clr;
+			margin-top: 5px;
+			margin-left: 0;
+			margin-bottom: 15px;
+			border: none;
+		}
+	}
+}
+
+.cards__menu {
+	&-item {
+		animation: cards__menu-item 810ms
+			cubic-bezier(0.1, 0.9, 0.1, 1);
+		opacity: 0;
+		animation-fill-mode: forwards;
+
+		@for $i from 1 through 10 {
+			&--#{$i} {
+				animation-delay: 300ms * $i;
+			}
+		}
+	}
+
+	.card {
+		@include card;
+		display: flex;
+		align-items: flex-end;
+		padding: 15px;
+		margin-bottom: 12px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	.card:hover .card__validation {
+		margin-right: -15px;
+	}
+}
+
+@keyframes cards__menu-item {
+	0% {
+		transform: translateX(-300%);
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.card__menu {
+	flex: 1;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+	h4,
+	p {
+		margin: 0;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	h4 {
+		font-weight: 500;
+		font-size: 17px;
+		margin-bottom: 3px;
+	}
+
+	p {
+		font-weight: 300;
+		font-size: 14px;
+	}
+}
+
+.card__price {
+	margin: 0;
+	font-size: 15px;
+	font-weight: 700;
+	color: $txt-clr;
+	padding-left: 8px;
+	margin-right: 32px;
+}
+
+.card__validation {
+	background: $tertiary-clr;
+	margin: -15px -80px -15px -15px;
+	width: 64px;
+	height: 73px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.5s;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.icon__validation {
+	height: 22px;
+	width: 22px;
+	background: $secondary-bg;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+
+	svg {
+		font-weight: 900;
+		fill: $tertiary-clr;
+		height: 16px;
+		width: 16px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.menu {
+		.section__title {
+			justify-content: center;
+			gap: 30px;
+			margin-right: auto;
+		}
+	}
+
+	.section__title,
+	.starters__section,
+	.dishes__section,
+	.desserts__section {
+		max-width: 634px;
+		margin: auto;
+	}
+}
