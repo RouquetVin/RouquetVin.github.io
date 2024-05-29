@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 * {
 	text-decoration: none;
@@ -101,4 +102,8 @@ h2 {
 
 .links a:nth-child(2) {
 	font-family: 'Shrikhand', sans-serif;
+}
+
+.links a:nth-child(3) {
+	font-family: 'DM Sans', sans-serif;
 }
