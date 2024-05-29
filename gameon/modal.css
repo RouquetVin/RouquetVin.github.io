@@ -83,6 +83,7 @@ img {
 	display: none;
 	background: var(--color-bg-primary);
 	font-size: 20px;
+	border-radius: 15px;
 }
 
 .header-logo {
@@ -561,6 +562,8 @@ footer {
 		position: absolute;
 		right: 0;
 		top: 0;
+		background: var(--color-primary);
+		color: var(--color-bg-primary);
 	}
 
 	.hero-headline {
