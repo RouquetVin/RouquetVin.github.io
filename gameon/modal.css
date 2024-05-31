@@ -30,7 +30,6 @@ body {
 
 p {
 	margin-bottom: 0;
-	padding: 0.5vw;
 }
 
 img {
@@ -46,11 +45,16 @@ img {
 }
 
 .topnav a {
-	color: var(--color-primary);
+	color: #232323;
 	text-align: center;
 	padding: 12px 12px;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 19px;
+	font-weight: 600;
+}
+
+.topnav a:last-of-type {
+	color: var(--color-primary);
 }
 
 .topnav a span {
@@ -82,8 +86,8 @@ img {
 .topnav .icon {
 	display: none;
 	background: var(--color-bg-primary);
-	font-size: 20px;
-	border-radius: 15px;
+	font-size: 19px;
+	border-radius: 8px;
 }
 
 .header-logo {
@@ -101,15 +105,12 @@ main {
 	font-size: 116%;
 	font-weight: bolder;
 	color: black;
-	padding-top: 0.5vw;
 	padding-left: 2vw;
 	padding-right: 2vw;
 	border-radius: 2rem;
-	margin: 0 20px;
+	margin: 50px 20px;
 	flex: 1;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 }
 
 .modal-btn {
@@ -431,13 +432,13 @@ input {
 .text-label {
 	font-weight: normal;
 	font-size: 14px;
+	margin-bottom: 13px;
 }
 
 .hero-section {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
-	margin-bottom: 10px;
 	border-radius: 10px;
 }
 
@@ -490,8 +491,6 @@ input {
 
 .hero-img {
 	grid-column: span 8;
-	height: 657px;
-	width: auto;
 }
 
 .hero-img img {
@@ -585,6 +584,11 @@ footer {
 		top: -6px;
 	}
 
+	main {
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	.hero-section {
 		display: flex;
 		flex-direction: column;
@@ -656,6 +660,7 @@ footer {
 
 	main {
 		margin-top: 79px;
+		margin-bottom: 0;
 		font-size: 100%;
 	}
 
@@ -705,6 +710,10 @@ footer {
 	.text-control {
 		height: 50px;
 		margin-bottom: 7px;
+	}
+
+	.text-label {
+		margin-bottom: 6px;
 	}
 
 	.checkbox-label .checkbox-icon,

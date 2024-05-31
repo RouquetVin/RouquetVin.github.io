@@ -1,7 +1,9 @@
 // DOM Elements
+const body = document.querySelector('body');
 const main = document.querySelector('main');
 const modalBtn = document.querySelectorAll('.modal-btn');
 const modalbg = document.querySelector('.bground');
+const closeM = document.querySelector('.close');
 const form = document.querySelector('form[name="reserve"]');
 const inputs = document.querySelectorAll('input');
 const firstname = document.getElementById('first');
@@ -25,6 +27,7 @@ function editNav() {
 // Launch modal form
 function launchModal() {
 	modalbg.style.display = 'flex';
+	body.style.overflow = 'hidden';
 }
 
 // Launch modal event
@@ -33,13 +36,13 @@ modalBtn.forEach((btn) => btn.addEventListener('click', launchModal));
 // Close modal form
 function closeModal() {
 	modalbg.style.display = 'none';
+	body.style.overflow = 'auto';
 	inputs.forEach((input) => {
 		hideErrorMessage(input);
 	});
 }
 
 // Close modal event
-const closeM = document.querySelector('.close');
 closeM.addEventListener('click', closeModal);
 
 // Modal form
@@ -213,6 +216,7 @@ function showSuccessModal() {
 	closeBtns.forEach((closeBtn) => {
 		closeBtn.addEventListener('click', () => {
 			container.remove();
+			body.style.overflow = 'auto';
 		});
 	});
 }
@@ -229,8 +233,7 @@ function validate(e) {
 	if (validateForm()) {
 		showSuccessModal();
 		modalbg.style.display = 'none';
+		body.style.overflow = 'hidden';
 		form.reset();
 	}
-
-	return false;
 }
