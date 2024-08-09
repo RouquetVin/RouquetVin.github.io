@@ -1,0 +1,42 @@
+.add__heart {
+	position: relative;
+	border: none;
+	background: none;
+	cursor: pointer;
+	height: 28px;
+	width: 28px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.heart__outline {
+	fill: white;
+	stroke: black;
+	stroke-width: 1;
+}
+
+.heart__gradient {
+	position: absolute;
+	transform: scale(0);
+	transition: transform 1s ease-in-out;
+	fill: url(#heart__gradient);
+	stroke: url(#heart__gradient);
+}
+
+.gradient__checkbox {
+	position: absolute;
+	visibility: hidden;
+}
+
+#gradient__checkbox {
+	@for $i from 1 through 4 {
+		&#{$i}:checked + .card .add__heart .heart__gradient {
+			transform: scale(1);
+		}
+
+		&#{$i + 4}:checked + .add__heart .heart__gradient {
+			transform: scale(1);
+		}
+	}
+}

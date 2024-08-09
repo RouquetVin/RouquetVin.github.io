@@ -1,0 +1,72 @@
+.loader {
+	background: $secondary-bg;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 5;
+	opacity: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: loader 0.5s ease-in-out 2.5s forwards;
+}
+
+.loader__spinner {
+	border: 20px solid $primary-clr;
+	border-left-color: transparent;
+	width: 220px;
+	height: 220px;
+	border-radius: 100%;
+	animation: loader__spinner 1s ease 3;
+	position: absolute;
+}
+
+.spinner__arrow {
+	width: 0;
+	border: 20px solid transparent;
+	border-right-color: $primary-clr;
+	position: relative;
+	top: 162px;
+	left: -8px;
+	transform: rotate(45deg);
+}
+
+.loader__extern-frame {
+	width: 260px;
+	height: 260px;
+	border: 20px solid $secondary-clr;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loader__intern-frame {
+	width: 180px;
+	height: 180px;
+	border: 20px solid $secondary-clr;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo {
+	align-self: center;
+	margin: 0;
+	width: 162px;
+	height: auto;
+}
+
+@keyframes loader {
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes loader__spinner {
+	100% {
+		transform: rotate(360deg);
+	}
+}

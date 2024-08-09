@@ -1,0 +1,92 @@
+.restaurants {
+	background: $primary-bg;
+	margin-top: 30px;
+	padding-top: 10px;
+	padding-bottom: 50px;
+
+	h3 {
+		font-size: 24px;
+		font-weight: 700;
+	}
+
+	.cards {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+		justify-content: space-between;
+	}
+
+	.card {
+		@include card;
+		position: relative;
+		height: 251px;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
+
+	.invisible__link {
+		position: absolute;
+		inset: 0;
+	}
+
+	img {
+		height: 231px;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		object-fit: cover;
+		margin-top: -57px;
+		width: 100%;
+		display: block;
+	}
+
+	.badge__new {
+		position: absolute;
+		height: 29px;
+		width: 80px;
+		top: 16px;
+		right: 12px;
+		background: $tertiary-clr;
+		font-size: 14px;
+		font-weight: 500;
+		color: $badge-txt-clr;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 3px;
+	}
+
+	.card__content {
+		display: flex;
+		justify-content: space-between;
+		padding: 14.5px 20px 14.5px 14.5px;
+		align-items: center;
+
+		h4,
+		p {
+			margin: 0;
+			padding-bottom: 5px;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.restaurants {
+		padding: 50px 180px;
+
+		.cards {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 50px;
+		}
+
+		.card {
+			width: 45.2%;
+		}
+	}
+}

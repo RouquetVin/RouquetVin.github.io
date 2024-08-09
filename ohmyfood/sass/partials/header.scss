@@ -1,0 +1,43 @@
+.appBar {
+	display: flex;
+	justify-content: center;
+	box-shadow: 0px 2px 4px 0px #00000026;
+	position: relative;
+	z-index: 2;
+	height: 63px;
+
+	.logo__link {
+		text-decoration: none;
+		color: black;
+		align-self: center;
+	}
+
+	svg {
+		align-items: center;
+		position: absolute;
+		left: 17px;
+		height: 30px;
+		width: 30px;
+		top: 28%;
+		display: flex;
+		justify-content: center;
+		fill: $svg-clr;
+		padding: 6px;
+		box-sizing: border-box;
+	}
+
+	.appBar__logo {
+		align-self: center;
+		font-family: 'Shrikhand', 'cursive';
+		text-align: center;
+		margin: 0;
+		font-size: 30px;
+		font-weight: 400;
+	}
+}
+
+@media (min-width: 1024px) {
+	.appBar {
+		box-shadow: none;
+	}
+}
